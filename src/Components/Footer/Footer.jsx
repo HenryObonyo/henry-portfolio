@@ -1,4 +1,3 @@
-
 import React from "react";
 import "./Footer.css";
 
@@ -52,7 +51,6 @@ function Footer() {
   return (
     <footer className="footer" id="footer">
       <div className="footer_container container">
-        {/* Main footer content */}
         <div className="footer_main">
           {/* Brand */}
           <div className="footer_brand">
@@ -125,7 +123,7 @@ function Footer() {
             </p>
 
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:henryobonyo16@gmail.com"
               className="footer_contact_link"
             >
               <BsEnvelope />
@@ -134,11 +132,11 @@ function Footer() {
             </a>
 
             <a
-              href="tel:+2547XXXXXXXX"
+              href="#contact"
               className="footer_contact_link"
             >
               <BsTelephone />
-              <span>Call me directly</span>
+              <span>Contact me</span>
               <BsArrowUpRight />
             </a>
 
@@ -156,7 +154,7 @@ function Footer() {
           </p>
 
           <p className="footer_made_with">
-            Designed & built with <BsHeartFill /> by HONTECH
+            Designed &amp; built with <BsHeartFill /> by HONTECH
           </p>
 
           <a href="#home" className="footer_back_top">
