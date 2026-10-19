@@ -1,0 +1,1215 @@
+
+/* =========================================================
+   HONTECH PORTFOLIO — EXPERIENCE PAGE
+   Dark Navy | Pink Accent | Responsive
+   Partnerships, Data & Technology
+========================================================= */
+
+/* -------------------------
+   1. ROOT VARIABLES
+------------------------- */
+
+:root {
+  --exp-bg: #0b1018;
+  --exp-surface: #111925;
+  --exp-card: #111925;
+  --exp-text: #f4f5f8;
+  --exp-muted: #a2adbd;
+  --exp-border: rgba(255, 255, 255, 0.1);
+  --exp-accent: #e9326f;
+  --exp-accent-light: rgba(233, 50, 111, 0.09);
+  --exp-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+  --exp-radius: 16px;
+  --exp-transition: 0.25s ease;
+
+  /* TechAI Path */
+  --exp-tech: #e9326f;
+  --exp-tech-light: rgba(233, 50, 111, 0.09);
+
+  /* KNBS */
+  --exp-data: #e9326f;
+  --exp-data-light: rgba(233, 50, 111, 0.09);
+}
+
+/* -------------------------
+   2. MAIN SECTION
+------------------------- */
+
+.work-experience {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  padding: 80px 6%;
+  overflow: hidden;
+  background: var(--exp-bg);
+  color: var(--exp-text);
+  scroll-margin-top: 90px;
+  font-family: inherit;
+  line-height: 1.6;
+}
+
+.work-experience,
+.work-experience * {
+  box-sizing: border-box;
+}
+
+.work-experience::before {
+  content: "";
+  position: absolute;
+  top: -170px;
+  right: -150px;
+  z-index: -1;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(233, 50, 111, 0.11),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.work-experience::after {
+  content: "";
+  position: absolute;
+  bottom: 80px;
+  left: -190px;
+  z-index: -1;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(233, 50, 111, 0.07),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.work-experience-container {
+  position: relative;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* -------------------------
+   3. INTRODUCTION
+------------------------- */
+
+.work-intro {
+  position: relative;
+  max-width: 790px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.work-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  color: var(--exp-accent);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.work-eyebrow-line {
+  display: inline-block;
+  width: 32px;
+  height: 2px;
+  border-radius: 10px;
+  background: var(--exp-accent);
+}
+
+.work-intro h2 {
+  margin: 0;
+  color: var(--exp-text);
+  font-size: clamp(2.3rem, 5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.055em;
+}
+
+.work-intro h2 span {
+  color: var(--exp-accent);
+}
+
+.work-intro-text {
+  max-width: 670px;
+  margin: 22px auto 0;
+  color: var(--exp-muted);
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+/* Introduction highlight */
+
+.work-intro-footer {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 26px;
+  padding: 15px 20px;
+  border: 1px solid var(--exp-border);
+  border-radius: 12px;
+  background: var(--exp-surface);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.12);
+  text-align: left;
+}
+
+.work-intro-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 43px;
+  height: 43px;
+  border: 1px solid rgba(233, 50, 111, 0.2);
+  border-radius: 10px;
+  background: rgba(233, 50, 111, 0.09);
+  color: var(--exp-accent);
+  font-size: 1.2rem;
+}
+
+.work-intro-footer strong,
+.work-intro-footer small {
+  display: block;
+}
+
+.work-intro-footer strong {
+  margin-bottom: 5px;
+  color: var(--exp-text);
+  font-size: 0.88rem;
+  font-weight: 750;
+}
+
+.work-intro-footer small {
+  color: var(--exp-muted);
+  font-size: 0.76rem;
+  line-height: 1.6;
+}
+
+/* -------------------------
+   4. FOCUS AREAS
+------------------------- */
+
+.work-focus {
+  margin-top: 30px;
+  padding-top: 23px;
+  border-top: 1px solid var(--exp-border);
+}
+
+.work-focus-label {
+  display: block;
+  color: var(--exp-muted);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.work-focus-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.work-focus-list span {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 14px;
+  border: 1px solid var(--exp-border);
+  border-radius: 9px;
+  background: var(--exp-surface);
+  color: var(--exp-text);
+  font-size: 0.79rem;
+  font-weight: 650;
+  transition:
+    border-color var(--exp-transition),
+    transform var(--exp-transition),
+    background var(--exp-transition);
+}
+
+.work-focus-list span:hover {
+  transform: translateY(-2px);
+  border-color: rgba(233, 50, 111, 0.5);
+  background: rgba(233, 50, 111, 0.045);
+}
+
+.work-focus-list svg {
+  color: var(--exp-accent);
+  font-size: 1rem;
+}
+
+/* -------------------------
+   5. EXPERIENCE TIMELINE
+------------------------- */
+
+.work-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+.work-timeline::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  bottom: 35px;
+  left: 29px;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    rgba(233, 50, 111, 0.65),
+    rgba(233, 50, 111, 0.3) 60%,
+    var(--exp-border) 90%,
+    transparent
+  );
+  pointer-events: none;
+}
+
+/* -------------------------
+   6. EXPERIENCE CARDS
+------------------------- */
+
+.work-card {
+  --experience-accent: var(--exp-accent);
+  --experience-accent-light: var(--exp-accent-light);
+
+  position: relative;
+  min-width: 0;
+  padding: 28px 30px 0;
+  overflow: hidden;
+  border: 1px solid var(--exp-border);
+  border-radius: var(--exp-radius);
+  background: var(--exp-card);
+  color: var(--exp-text);
+  box-shadow: var(--exp-shadow);
+  transition:
+    transform var(--exp-transition),
+    box-shadow var(--exp-transition),
+    border-color var(--exp-transition);
+  animation: expFadeIn 0.6s ease both;
+}
+
+.work-card:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.work-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(233, 50, 111, 0.45);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+/* KNBS */
+
+.work-card-data {
+  --experience-accent: var(--exp-data);
+  --experience-accent-light: var(--exp-data-light);
+}
+
+/* TechAI Path */
+
+.work-card-technology {
+  --experience-accent: var(--exp-tech);
+  --experience-accent-light: var(--exp-tech-light);
+}
+
+/* Card top accent */
+
+.work-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--experience-accent),
+    rgba(233, 50, 111, 0.1) 85%
+  );
+}
+
+/* -------------------------
+   7. CARD TOP LINE
+------------------------- */
+
+.work-card-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-bottom: 21px;
+  border-bottom: 1px solid var(--exp-border);
+}
+
+.work-card-index {
+  color: var(--exp-muted);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.work-card-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  padding: 7px 11px;
+  border: 1px solid var(--exp-border);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.025);
+  color: var(--exp-muted);
+  font-size: 0.7rem;
+  font-weight: 650;
+}
+
+.work-status-dot {
+  flex-shrink: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--experience-accent);
+  box-shadow: 0 0 0 3px rgba(233, 50, 111, 0.12);
+}
+
+/* -------------------------
+   8. ROLE HEADING
+------------------------- */
+
+.work-card-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 26px;
+}
+
+.work-timeline-marker {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border: 1px solid rgba(233, 50, 111, 0.25);
+  border-radius: 13px;
+  background: rgba(233, 50, 111, 0.09);
+  color: var(--experience-accent);
+  font-size: 1.4rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.work-role-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.work-role-number {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--experience-accent);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+}
+
+.work-role-content h3 {
+  margin: 0;
+  color: var(--exp-text);
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.035em;
+  overflow-wrap: anywhere;
+}
+
+.work-role-content h4 {
+  margin: 8px 0 0;
+  color: var(--exp-muted);
+  font-size: 0.94rem;
+  font-weight: 600;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+/* Department label */
+
+.work-department {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  margin: 10px 0 0;
+  padding: 6px 10px;
+  border: 1px solid rgba(233, 50, 111, 0.25);
+  border-radius: 7px;
+  background: rgba(233, 50, 111, 0.08);
+  color: #f28aad;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+/* -------------------------
+   9. ROLE METADATA
+------------------------- */
+
+.work-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 19px;
+  margin-top: 16px;
+}
+
+.work-meta span {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--exp-muted);
+  font-size: 0.76rem;
+  line-height: 1.6;
+}
+
+.work-meta svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--experience-accent);
+  font-size: 0.93rem;
+}
+
+/* -------------------------
+   10. EXPERIENCE OVERVIEW
+------------------------- */
+
+.work-card-summary {
+  margin-top: 26px;
+  padding: 20px 22px;
+  border: 1px solid var(--exp-border);
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.work-summary-label {
+  display: block;
+  color: var(--exp-accent);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.work-card-summary p {
+  margin: 11px 0 0;
+  color: var(--exp-muted);
+  font-size: 0.88rem;
+  line-height: 1.85;
+}
+
+/* -------------------------
+   11. RESPONSIBILITIES HEADER
+------------------------- */
+
+.work-responsibilities-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 29px;
+  margin-bottom: 15px;
+}
+
+.work-responsibilities-heading h4 {
+  margin: 0;
+  color: var(--exp-text);
+  font-size: 0.97rem;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.work-responsibilities-heading > span {
+  color: var(--exp-muted);
+  font-size: 0.63rem;
+  font-weight: 750;
+  letter-spacing: 0.09em;
+}
+
+/* -------------------------
+   12. RESPONSIBILITIES LIST
+------------------------- */
+
+.work-responsibilities {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 25px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.work-responsibilities li {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  min-width: 0;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--exp-border);
+  color: var(--exp-muted);
+  font-size: 0.84rem;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.work-responsibilities li:nth-last-child(-n + 2) {
+  border-bottom-color: transparent;
+}
+
+.work-responsibility-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  margin-top: 1px;
+  border: 1px solid rgba(233, 50, 111, 0.16);
+  border-radius: 9px;
+  background: rgba(233, 50, 111, 0.08);
+  color: var(--experience-accent);
+  font-size: 1rem;
+  transition:
+    transform var(--exp-transition),
+    background var(--exp-transition);
+}
+
+.work-responsibilities li:hover .work-responsibility-icon {
+  transform: translateY(-2px);
+  background: rgba(233, 50, 111, 0.16);
+}
+
+/* -------------------------
+   13. SKILLS DEVELOPED
+------------------------- */
+
+.work-skills-section {
+  margin-top: 28px;
+  padding-top: 23px;
+  border-top: 1px solid var(--exp-border);
+}
+
+.work-skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 14px;
+}
+
+.work-skill-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 11px;
+  border: 1px solid rgba(233, 50, 111, 0.22);
+  border-radius: 7px;
+  background: rgba(73, 72, 72, 0.281);
+  color: white;
+  font-size: 0.74rem;
+  font-weight: 650;
+  line-height: 1.5;
+  transition:
+    border-color var(--exp-transition),
+    background var(--exp-transition),
+    transform var(--exp-transition);
+}
+
+.work-skill-tag:hover {
+  transform: translateY(-2px);
+  border-color: rgba(233, 50, 111, 0.55);
+  background: rgba(50, 233, 81, 0);
+}
+
+/* -------------------------
+   14. KEY TAKEAWAY
+------------------------- */
+
+.work-impact {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 24px;
+  padding: 18px;
+  border-left: 3px solid var(--experience-accent);
+  border-radius: 0 10px 10px 0;
+  background: rgba(233, 50, 111, 0.055);
+}
+
+.work-impact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(233, 50, 111, 0.2);
+  border-radius: 9px;
+  background: var(--exp-surface);
+  color: var(--experience-accent);
+  font-size: 1.05rem;
+}
+
+.work-impact > div {
+  min-width: 0;
+}
+
+.work-impact .work-summary-label {
+  margin-bottom: 8px;
+}
+
+.work-impact p {
+  margin: 0;
+  color: var(--exp-muted);
+  font-size: 0.85rem;
+  font-weight: 550;
+  line-height: 1.8;
+}
+
+/* -------------------------
+   15. CARD FOOTER
+------------------------- */
+
+.work-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 28px -30px 0;
+  padding: 18px 30px;
+  border-top: 1px solid var(--exp-border);
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.work-footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--exp-text);
+  font-size: 0.74rem;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+}
+
+.work-footer-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--experience-accent);
+}
+
+.work-footer-type {
+  color: var(--exp-muted);
+  font-size: 0.74rem;
+  font-weight: 550;
+}
+
+.work-footer-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33px;
+  height: 33px;
+  border: 1px solid var(--exp-border);
+  border-radius: 9px;
+  background: var(--exp-surface);
+  color: var(--exp-accent);
+  font-size: 1rem;
+  transition:
+    transform var(--exp-transition),
+    border-color var(--exp-transition);
+}
+
+.work-card:hover .work-footer-arrow {
+  transform: translate(2px, -2px);
+  border-color: var(--exp-accent);
+}
+
+/* -------------------------
+   16. CLOSING SECTION
+------------------------- */
+
+.work-closing {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 35px;
+  padding: 26px;
+  border: 1px solid var(--exp-border);
+  border-radius: var(--exp-radius);
+  background: var(--exp-surface);
+  box-shadow: var(--exp-shadow);
+}
+
+.work-closing-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 54px;
+  height: 54px;
+  border: 1px solid rgba(233, 50, 111, 0.25);
+  border-radius: 13px;
+  background: rgba(233, 50, 111, 0.09);
+  color: var(--exp-accent);
+  font-size: 1.5rem;
+}
+
+.work-closing-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.work-closing-content h3 {
+  margin: 9px 0;
+  color: var(--exp-text);
+  font-size: clamp(1.08rem, 2vw, 1.4rem);
+  font-weight: 800;
+  line-height: 1.45;
+  letter-spacing: -0.025em;
+}
+
+.work-closing-content p {
+  max-width: 680px;
+  margin: 0;
+  color: var(--exp-muted);
+  font-size: 0.85rem;
+  line-height: 1.85;
+}
+
+.work-closing-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-shrink: 0;
+  padding: 12px 17px;
+  border: 1px solid var(--exp-accent);
+  border-radius: 8px;
+  background: var(--exp-accent);
+  color: #ffffff;
+  font-size: 0.81rem;
+  font-weight: 750;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    transform var(--exp-transition),
+    box-shadow var(--exp-transition),
+    background var(--exp-transition);
+}
+
+.work-closing-link:hover {
+  transform: translateY(-2px);
+  background: #c92159;
+  border-color: #c92159;
+  box-shadow: 0 8px 20px rgba(233, 50, 111, 0.2);
+}
+
+.work-closing-link:focus-visible {
+  outline: 3px solid rgba(233, 50, 111, 0.4);
+  outline-offset: 4px;
+}
+
+/* -------------------------
+   17. ENTRANCE ANIMATION
+------------------------- */
+
+@keyframes expFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------------------------
+   18. TABLET RESPONSIVENESS
+------------------------- */
+
+@media (max-width: 1024px) {
+  .work-experience {
+    padding: 70px 5%;
+  }
+
+  .work-intro {
+    margin-bottom: 45px;
+  }
+
+  .work-card {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  .work-card-footer {
+    margin-right: -25px;
+    margin-left: -25px;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  .work-responsibilities {
+    gap: 0 18px;
+  }
+
+  .work-closing {
+    gap: 17px;
+    padding: 23px;
+  }
+}
+
+/* -------------------------
+   19. MOBILE RESPONSIVENESS
+------------------------- */
+
+@media (max-width: 700px) {
+  .work-experience {
+    padding: 55px 5%;
+  }
+
+  .work-intro {
+    margin-bottom: 35px;
+  }
+
+  .work-eyebrow {
+    gap: 9px;
+    margin-bottom: 17px;
+    font-size: 0.62rem;
+    letter-spacing: 0.13em;
+  }
+
+  .work-eyebrow-line {
+    width: 22px;
+  }
+
+  .work-intro h2 {
+    font-size: clamp(2.1rem, 8vw, 3rem);
+    letter-spacing: -0.05em;
+  }
+
+  .work-intro-text {
+    margin-top: 18px;
+    font-size: 0.88rem;
+    line-height: 1.8;
+  }
+
+  .work-intro-footer {
+    width: 100%;
+    max-width: 380px;
+    margin-top: 22px;
+    padding: 12px 14px;
+  }
+
+  .work-focus {
+    margin-top: 25px;
+    padding-top: 20px;
+  }
+
+  .work-focus-list {
+    gap: 8px;
+  }
+
+  .work-focus-list span {
+    gap: 7px;
+    padding: 8px 10px;
+    font-size: 0.73rem;
+  }
+
+  .work-timeline {
+    gap: 22px;
+  }
+
+  .work-timeline::before {
+    left: 16px;
+  }
+
+  .work-card {
+    padding: 21px 17px 0;
+    border-radius: 13px;
+  }
+
+  .work-card-topline {
+    align-items: flex-start;
+    padding-bottom: 16px;
+  }
+
+  .work-card-index {
+    font-size: 0.6rem;
+  }
+
+  .work-card-status {
+    font-size: 0.65rem;
+  }
+
+  .work-card-heading {
+    gap: 13px;
+    margin-top: 21px;
+  }
+
+  .work-timeline-marker {
+    width: 41px;
+    height: 41px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+  }
+
+  .work-role-number {
+    font-size: 0.56rem;
+    line-height: 1.6;
+  }
+
+  .work-role-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .work-role-content h4 {
+    margin-top: 6px;
+    font-size: 0.83rem;
+  }
+
+  .work-department {
+    padding: 6px 8px;
+    font-size: 0.7rem;
+  }
+
+  .work-meta {
+    gap: 8px 12px;
+    margin-top: 12px;
+  }
+
+  .work-meta span {
+    font-size: 0.7rem;
+  }
+
+  .work-card-summary {
+    margin-top: 21px;
+    padding: 15px;
+  }
+
+  .work-card-summary p {
+    font-size: 0.82rem;
+    line-height: 1.8;
+  }
+
+  .work-responsibilities-heading {
+    align-items: flex-start;
+    margin-top: 24px;
+    margin-bottom: 11px;
+  }
+
+  .work-responsibilities-heading h4 {
+    font-size: 0.89rem;
+  }
+
+  .work-responsibilities-heading > span {
+    font-size: 0.58rem;
+  }
+
+  .work-responsibilities {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .work-responsibilities li {
+    gap: 11px;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--exp-border) !important;
+    font-size: 0.81rem;
+    line-height: 1.75;
+  }
+
+  .work-responsibilities li:last-child {
+    border-bottom-color: transparent !important;
+  }
+
+  .work-responsibility-icon {
+    width: 31px;
+    height: 31px;
+    border-radius: 8px;
+  }
+
+  .work-skills-section {
+    margin-top: 21px;
+    padding-top: 19px;
+  }
+
+  .work-skill-tags {
+    gap: 7px;
+    margin-top: 11px;
+  }
+
+  .work-skill-tag {
+    padding: 7px 9px;
+    font-size: 0.68rem;
+  }
+
+  .work-impact {
+    gap: 10px;
+    margin-top: 20px;
+    padding: 13px;
+  }
+
+  .work-impact-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 0.95rem;
+  }
+
+  .work-impact p {
+    font-size: 0.79rem;
+  }
+
+  .work-card-footer {
+    gap: 9px;
+    margin: 21px -17px 0;
+    padding: 15px 17px;
+  }
+
+  .work-footer-brand {
+    font-size: 0.65rem;
+  }
+
+  .work-footer-type {
+    font-size: 0.67rem;
+  }
+
+  .work-footer-arrow {
+    width: 29px;
+    height: 29px;
+  }
+
+  .work-closing {
+    display: grid;
+    grid-template-columns: 45px minmax(0, 1fr);
+    gap: 14px;
+    margin-top: 25px;
+    padding: 18px;
+    border-radius: 13px;
+  }
+
+  .work-closing-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 1.25rem;
+  }
+
+  .work-closing-content h3 {
+    margin: 7px 0;
+    font-size: 1.03rem;
+  }
+
+  .work-closing-content p {
+    font-size: 0.8rem;
+    line-height: 1.8;
+  }
+
+  .work-closing-link {
+    grid-column: 1 / -1;
+    width: 100%;
+    padding: 12px 15px;
+  }
+}
+
+/* -------------------------
+   20. SMALL MOBILE SCREENS
+------------------------- */
+
+@media (max-width: 400px) {
+  .work-experience {
+    padding: 45px 16px;
+  }
+
+  .work-intro h2 {
+    font-size: 2rem;
+  }
+
+  .work-card {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .work-card-heading {
+    gap: 10px;
+  }
+
+  .work-timeline-marker {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+  }
+
+  .work-role-content h3 {
+    font-size: 1.08rem;
+  }
+
+  .work-card-footer {
+    margin-right: -14px;
+    margin-left: -14px;
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .work-card-status {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .work-focus-list span {
+    padding: 7px 8px;
+    font-size: 0.68rem;
+  }
+
+  .work-skill-tag {
+    font-size: 0.65rem;
+  }
+
+  .work-closing {
+    padding: 14px;
+  }
+}
+
+/* -------------------------
+   21. ACCESSIBILITY
+------------------------- */
+
+.work-experience a:focus-visible {
+  outline: 3px solid rgba(233, 50, 111, 0.4);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-experience *,
+  .work-experience *::before,
+  .work-experience *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

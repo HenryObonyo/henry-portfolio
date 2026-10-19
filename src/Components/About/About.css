@@ -1,0 +1,603 @@
+
+/* =========================================
+   HONTECH — ABOUT PAGE
+   Scoped styles for About.jsx
+========================================= */
+
+.about_section {
+  --about-bg: #0b1018;
+  --about-panel: #111925;
+  --about-border: rgba(255, 255, 255, 0.1);
+  --about-text: #f4f5f8;
+  --about-muted: #a2adbd;
+  --about-accent: #e9326f;
+
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 64px 0;
+  overflow: hidden;
+  background-color: var(--about-bg);
+  color: var(--about-text);
+  font-family: inherit;
+  line-height: 1.6;
+}
+
+.about_section,
+.about_section * {
+  box-sizing: border-box;
+}
+
+.about_section .about_container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Reset inherited heading and paragraph styles */
+
+.about_section h2,
+.about_section h3,
+.about_section h4,
+.about_section p {
+  font-family: inherit;
+}
+
+.about_section h2,
+.about_section h3,
+.about_section h4 {
+  color: var(--about-text);
+}
+
+.about_section p {
+  overflow-wrap: break-word;
+}
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.about_section .about_heading {
+  max-width: 760px;
+  margin: 0 0 42px;
+}
+
+.about_section .about_eyebrow,
+.about_section .about_section_label {
+  display: inline-block;
+  color: var(--about-accent);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.about_section .about_heading h2 {
+  margin: 14px 0 16px;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+}
+
+.about_section .about_heading h2 span,
+.about_section .about_story h3 span {
+  color: var(--about-accent);
+}
+
+.about_section .about_heading > p {
+  max-width: 690px;
+  margin: 0;
+  color: var(--about-muted);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* =========================================
+   MAIN PROFILE
+========================================= */
+
+.about_section .about_main {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+  padding: 30px;
+  border: 1px solid var(--about-border);
+  border-radius: 16px;
+  background: var(--about-panel);
+}
+
+/* Profile image and identity */
+
+.about_section .about_profile {
+  min-width: 0;
+}
+
+.about_section .about_image {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: 310px;
+  margin: 0 0 22px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #1a2330;
+}
+
+.about_section .about_image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  margin: 0;
+  border-radius: inherit;
+  object-fit: cover;
+  object-position: center 30%;
+  transition: transform 0.35s ease;
+}
+
+.about_section .about_image:hover img {
+  transform: scale(1.035);
+}
+
+.about_section .about_status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+  color: #c3cbd7;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.about_section .status_dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--about-accent);
+  box-shadow: 0 0 10px rgba(233, 50, 111, 0.4);
+}
+
+.about_section .about_identity h3 {
+  margin: 0 0 5px;
+  font-size: 27px;
+  font-weight: 750;
+  line-height: 1.3;
+  letter-spacing: -0.7px;
+}
+
+.about_section .about_identity > p {
+  margin: 0;
+  color: var(--about-muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Biography */
+
+.about_section .about_story {
+  min-width: 0;
+}
+
+.about_section .about_story h3 {
+  margin: 12px 0 17px;
+  font-size: clamp(25px, 3vw, 35px);
+  font-weight: 750;
+  line-height: 1.25;
+  letter-spacing: -0.9px;
+}
+
+.about_section .about_story > p {
+  margin: 0 0 15px;
+  color: var(--about-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* Explore work link */
+
+.about_section .about_link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  padding: 0 0 5px;
+  border: 0;
+  border-bottom: 1px solid rgba(233, 50, 111, 0.65);
+  border-radius: 0;
+  background: transparent;
+  color: var(--about-text);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.about_section .about_link svg {
+  color: var(--about-accent);
+  transition: transform 0.2s ease;
+}
+
+.about_section .about_link:hover {
+  color: var(--about-accent);
+}
+
+.about_section .about_link:hover svg {
+  transform: translateX(4px);
+}
+
+/* =========================================
+   EDUCATION AND EXPERTISE
+========================================= */
+
+.about_section .about_details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 42px;
+  margin-top: 52px;
+}
+
+.about_section .about_detail_section {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  min-width: 0;
+}
+
+.about_section .about_detail_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  border: 1px solid rgba(233, 50, 111, 0.25);
+  border-radius: 10px;
+  background: rgba(233, 50, 111, 0.08);
+  color: var(--about-accent);
+  font-size: 17px;
+}
+
+.about_section .about_detail_body {
+  min-width: 0;
+  flex: 1;
+}
+
+.about_section .about_detail_body > .about_section_label {
+  margin: 1px 0 8px;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+.about_section .about_detail_body > h3 {
+  margin: 0 0 12px;
+  font-size: 22px;
+  font-weight: 750;
+  line-height: 1.35;
+  letter-spacing: -0.5px;
+}
+
+.about_section .about_detail_body > p {
+  margin: 0;
+  color: var(--about-muted);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+/* Cisco learning */
+
+.about_section .about_credential {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  margin-top: 20px;
+  padding-top: 17px;
+  border-top: 1px solid var(--about-border);
+}
+
+.about_section .about_credential > svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--about-accent);
+  font-size: 15px;
+}
+
+.about_section .about_credential p {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 0;
+}
+
+.about_section .about_credential strong {
+  color: var(--about-text);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.about_section .about_credential span {
+  color: var(--about-muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* Areas of interest */
+
+.about_section .about_expertise {
+  margin-top: 16px;
+}
+
+.about_section .expertise_item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 15px 0;
+  border-top: 1px solid var(--about-border);
+}
+
+.about_section .expertise_item > span {
+  flex-shrink: 0;
+  padding-top: 2px;
+  color: var(--about-accent);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.about_section .expertise_item h4 {
+  margin: 0 0 5px;
+  font-size: 13px;
+  font-weight: 750;
+  line-height: 1.5;
+}
+
+.about_section .expertise_item p {
+  margin: 0;
+  color: var(--about-muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   CLOSING STATEMENT
+========================================= */
+
+.about_section .about_motto {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 45px;
+  padding: 20px 23px;
+  border-left: 3px solid var(--about-accent);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.about_section .about_motto_icon {
+  flex-shrink: 0;
+  color: var(--about-accent);
+  font-size: 21px;
+}
+
+.about_section .about_motto p {
+  margin: 0;
+  color: var(--about-muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.about_section .about_motto strong {
+  color: var(--about-text);
+  font-weight: 700;
+}
+
+/* =========================================
+   TABLETS
+========================================= */
+
+@media (max-width: 900px) {
+  .about_section {
+    padding: 54px 0;
+  }
+
+  .about_section .about_container {
+    max-width: 760px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .about_section .about_main {
+    grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+    gap: 28px;
+    padding: 24px;
+  }
+
+  .about_section .about_image {
+    height: 270px;
+  }
+
+  .about_section .about_details {
+    gap: 26px;
+    margin-top: 42px;
+  }
+
+  .about_section .about_detail_section {
+    gap: 12px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 640px) {
+  .about_section {
+    padding: 42px 0;
+  }
+
+  .about_section .about_container {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .about_section .about_heading {
+    margin-bottom: 26px;
+  }
+
+  .about_section .about_heading h2 {
+    font-size: clamp(27px, 7vw, 36px);
+    letter-spacing: -1px;
+  }
+
+  .about_section .about_heading > p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .about_section .about_main {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 25px;
+    padding: 19px;
+    border-radius: 13px;
+  }
+
+  .about_section .about_profile {
+    display: grid;
+    grid-template-columns: 100px minmax(0, 1fr);
+    align-items: center;
+    gap: 8px 16px;
+  }
+
+  .about_section .about_image {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 100px;
+    height: 120px;
+    margin: 0;
+  }
+
+  .about_section .about_identity {
+    grid-column: 2;
+    min-width: 0;
+  }
+
+  .about_section .about_status {
+    gap: 6px;
+    margin-bottom: 7px;
+    font-size: 9px;
+    letter-spacing: 0.5px;
+  }
+
+  .about_section .about_identity h3 {
+    font-size: 21px;
+  }
+
+  .about_section .about_identity > p {
+    font-size: 11px;
+  }
+
+  .about_section .about_story h3 {
+    font-size: 27px;
+  }
+
+  .about_section .about_story > p {
+    font-size: 13px;
+    line-height: 1.85;
+  }
+
+  .about_section .about_details {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    margin-top: 36px;
+  }
+
+  .about_section .about_detail_body > h3 {
+    font-size: 20px;
+  }
+
+  .about_section .about_detail_body > p {
+    font-size: 12px;
+  }
+
+  .about_section .expertise_item {
+    gap: 12px;
+    padding: 13px 0;
+  }
+
+  .about_section .expertise_item p {
+    font-size: 12px;
+  }
+
+  .about_section .about_motto {
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 32px;
+    padding: 16px;
+  }
+
+  .about_section .about_motto p {
+    font-size: 12px;
+  }
+}
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+  .about_section .about_container {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .about_section .about_main {
+    padding: 14px;
+  }
+
+  .about_section .about_profile {
+    grid-template-columns: 82px minmax(0, 1fr);
+    column-gap: 12px;
+  }
+
+  .about_section .about_image {
+    width: 82px;
+    height: 104px;
+  }
+
+  .about_section .about_identity h3 {
+    font-size: 18px;
+  }
+
+  .about_section .about_identity > p {
+    font-size: 10px;
+  }
+
+  .about_section .about_status {
+    font-size: 8px;
+  }
+
+  .about_section .about_detail_icon {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .about_section *,
+  .about_section *::before,
+  .about_section *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
